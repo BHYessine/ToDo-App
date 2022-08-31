@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Work+Sans:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background-color: rgb(218, 216, 216);
+  height: 100vh;
+}
+body,
+#root,
+.container {
+  height: 100%;
+}
+.container {
+  position: relative;
+}
+.App {
+  position: relative;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2), 0 10px 30px 0 rgba(0, 0, 0, 0.19);
+  font-family: "Zen Antique Soft", serif;
+}
+
+.App .title {
+  color: rgb(235, 54, 241);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Henny Penny", cursive;
+  margin: 0;
+  padding: 10px 0;
+  letter-spacing: 3px;
+  border-bottom: 2px solid gold;
+  width: 100%;
+  text-align: center;
+}
+
+.App .btn-add {
+  position: absolute;
+  bottom: -23px;
+  padding: 10px 30px;
+  border: 2px solid rgb(235, 54, 241);
+  color: #fff;
+  background-color: rgb(235, 54, 241);
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2), 0 10px 30px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 23px;
+  cursor: pointer;
+  font-size: 18px;
+}
+button {
+  font-family: "Roboto", sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (min-width: 1024px) {
+  .App .btn-add:hover {
+    color: #eb36f1;
+    background-color: #fff;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .App {
+    width: 600px;
+  }
+  .App .title {
+    font-size: 24px;
+  }
+  .App .btn-add {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .App {
+    width: 350px;
+  }
+  .App .title {
+    font-size: 20px;
+  }
+  .App .btn-add {
+    font-size: 16px;
+  }
+}

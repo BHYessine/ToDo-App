@@ -1,0 +1,204 @@
+.addContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgb(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addContainer .task-detail {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: auto;
+  padding: 40px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.addContainer input,
+.addContainer textarea {
+  width: 200px;
+  border-radius: 5px;
+  border: 2px solid gold;
+  padding: 10px;
+  font-size: 14px;
+  resize: none;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 20px;
+}
+.addContainer .btn-add {
+  padding: 8px 30px;
+  border: 2px solid rgb(235, 54, 241);
+  color: #fff;
+  background-color: rgb(235, 54, 241);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.addContainer .btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  border: none;
+  color: #000000;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.list-container {
+  padding: 25px 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  min-height: 200px;
+  width: 100%;
+}
+.list-container h4 {
+  width: 310px;
+  text-align: center;
+}
+.list-container h2 {
+  text-align: center;
+}
+.list-todo,
+.list-done {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px 20px;
+}
+.list-todo {
+  border-right: 2px solid gold;
+}
+.task-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+}
+.task-detail p {
+  text-align: justify;
+  font-size: 13px;
+  padding: 10px 0;
+}
+.task-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 20px;
+}
+.icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+  width: 280px;
+  border-right: 10px solid gold;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-330px);
+}
+.notification.active {
+  transform: translateX(0px);
+}
+@media screen and (min-width: 1024px) {
+  .addContainer .btn-add:hover {
+    color: #eb36f1;
+    background-color: #fff;
+  }
+  .addContainer .btn-close:hover {
+    color: #ff0000;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .list-container {
+    padding: 15px 0px;
+  }
+  .list-todo,
+  .list-done {
+    gap: 10px;
+  }
+  .task-container {
+    padding: 8px;
+  }
+  .task-detail p {
+    font-size: 12px;
+    padding: 5px 0;
+  }
+  .task-icons {
+    gap: 15px;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+  .notification {
+    font-size: 14px;
+    width: 170px;
+    border-right: 5px solid gold;
+    padding: 10px;
+    transform: translateX(-195px);
+  }
+  .list-container h4 {
+    width: 260px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .list-container {
+    padding: 5px 0px;
+    flex-direction: column;
+  }
+
+  .list-todo,
+  .list-done {
+    gap: 10px;
+    padding: 20px 30px;
+  }
+  .list-todo {
+    border-right: none;
+    border-bottom: 2px solid gold;
+  }
+
+  .task-detail p {
+    font-size: 12px;
+    padding: 5px 0;
+  }
+  .task-icons {
+    gap: 20px;
+  }
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+  .notification {
+    font-size: 12px;
+    width: 140px;
+    border-right: 4px solid gold;
+    padding: 10px;
+    transform: translateX(-164px);
+  }
+  .list-container h4 {
+    width: 290px;
+  }
+}
